@@ -1,0 +1,348 @@
+@import "tailwindcss";
+@plugin "daisyui"{
+    themes: light --default, dark --prefersdark;
+    root: ":root";
+    include: ;
+    exclude: ;
+    prefix: ;
+    logs: true;
+}
+[data-theme="light"] {
+  nav{
+    background-color: transparent;
+    color: #393939;
+  }
+  .text-apropos{
+    color: #494949;
+  }
+  .navige-button button {
+    background-color: transparent;
+    color: #1c1c1c;
+    border-color: #555555;
+  }
+  .navige-button button:hover {
+    background-color: #2f2f2f;
+    color: #e3bd6b;
+    border-color: #2c2b2b;
+    shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  #a-propos{
+    background-color: aliceblue;
+  }
+  .group {
+  background: #fbf8f3;
+}
+  .card-skill:hover .skill-name {
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+  .Skils-name {
+  color: #4c4b4b;
+}
+  .Skils-tech-name {
+    color: #ffffff;
+  }
+
+  .footer {
+  position: relative;
+  background: #87934d;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+  .wave {
+  margin-top: 0.5rem;
+  position: absolute;
+  top: -30px;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: url("https://i.imgur.com/ZAts69f.png");
+  background-size: 600px 30px;
+  background-repeat: repeat-x;
+  filter: invert(20%) sepia(20%) saturate(100%) hue-rotate(270deg) brightness(100%) contrast(100%);
+}
+  .fotter-title{
+    color: #ffffff;
+  }
+  .Cartes h3,
+  .Cartes p {
+    color: #4e4d4d !important; /* !important pour écraser Tailwind si nécessaire */
+  }
+  .line {
+  fill: none;
+  stroke: #4e4d4d;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.text-p-menu{
+  color: #555555;
+}
+.mobile-nav{
+  background-color: white;
+}
+.text-mobile-nav{
+  color: #484848;
+}
+}
+
+[data-theme="dark"]{
+  .group {
+  box-shadow:
+    rgba(255, 255, 255, 0.05) 0px 2px 4px,
+    rgba(255, 255, 255, 0.05) 0px 7px 13px -3px,
+    rgba(255, 255, 255, 0.02) 0px -3px 0px inset;
+  border: 1px solid #2c2c2c;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+  #competences{
+    background-color: #1a1a1a;
+  }
+  .projet{
+    background-color: #1a1a1a;
+  }
+  .footer {
+  position: relative;
+  background: #161616;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+  .wave {
+  margin-top: 0.5rem;
+  position: absolute;
+  top: -30px;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: url("https://i.imgur.com/ZAts69f.png");
+  background-size: 600px 30px;
+  background-repeat: repeat-x;
+  filter: brightness(0) saturate(100%) invert(5%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(98%) contrast(92%);
+
+}
+.line {
+  fill: none;
+  stroke: white;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+}
+
+iframe {
+  pointer-events: none;
+  opacity: 0.25; /* ou selon ce que tu veux */
+}
+
+/* From Uiverse.io by WhiteNervosa */ 
+.btn-nav {
+  font-family: inherit;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+.btn-nav:focus,
+.btn-nav:hover {
+  color: #e3bd6b;
+}
+.btn-nav:focus:after,
+.btn-nav:hover:after {
+  width: 100%;
+  left: 0%;
+}
+.btn-nav:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #e3bd6b;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+  margin-top: 1rem;
+}
+
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 8s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 8s linear infinite;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 10s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 10s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: 600px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: 600px;
+  }
+  100% {
+    background-position-x: 0px;
+  }
+}
+
+/* === hamburger styles === */
+.hamburger {
+  cursor: pointer;
+}
+
+.hamburger input {
+  display: none;
+}
+
+.hamburger svg {
+  height: 3em;
+  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+
+.line-top-bottom {
+  stroke-dasharray: 12 63;
+}
+
+.hamburger input:checked + svg {
+  transform: rotate(-45deg);
+}
+
+.hamburger input:checked + svg .line-top-bottom {
+  stroke-dasharray: 20 300;
+  stroke-dashoffset: -32.42;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+/* Conteneur principal - CRITIQUE */
+#your-element-selector {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+  width: 100% !important;
+}
+
+/* Correction pour tous les conteneurs */
+.max-w-6xl, .max-w-7xl, .max-w-4xl {
+  max-width: calc(100vw - 2rem) !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Sections qui peuvent déborder */
+section {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Grilles responsive */
+.grid {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Flexbox containers */
+.flex {
+  max-width: 100%;
+}
+
+/* Images responsives */
+img {
+  max-width: 100%;
+  height: auto;
+}
