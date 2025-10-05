@@ -275,7 +275,7 @@ export default function Home() {
       className={poppins.className}
     >
       <nav
-        className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        className={`fixed top-0 w-full z-10 transition-all duration-300 ${
           isScrolled ? " backdrop-blur-sm  " : "bg-transparent"
         }`}
       >
@@ -467,7 +467,7 @@ export default function Home() {
       )}
 
       <VantaTopologyBackground theme={theme}>
-        <div className="flex flex-col lg:flex-row min-h-screen pt-16 sm:pt-20 md:pt-24">
+        <div className="flex flex-col lg:flex-row min-h-screen pt-16 sm:pt-20 md:pt-24 z-0">
           <section
             id="accueil"
             className="flex-1 flex items-center justify-center px-4 sm:px-6 relative overflow-hidden"
@@ -605,7 +605,7 @@ export default function Home() {
         </section>
       </BackgroundLines>
 
-      <BackgroundBeamsWithCollision className="relative z-0">
+      <BackgroundBeamsWithCollision className="relative ">
         <section id="competences" className="py-20 px-6 " ref={skillsRef}>
           <div className="max-w-6xl mx-auto">
             <h2 className="skills-title text-4xl font-bold text-center mb-16 bg-[#a1ae66] bg-clip-text text-transparent">
@@ -656,17 +656,17 @@ export default function Home() {
         </section>
       </BackgroundBeamsWithCollision>
 
-      {/* Contact Section */}
+      <section className="bg-[#F0F8FF]  lg:py-4 relative overflow-hidden ">
+        {/* Vagues animées */}
+        <div className="wave" id="wave1"></div>
+        <div className="wave" id="wave2"></div>
+        <div className="wave" id="wave3"></div>
+        <div className="wave" id="wave4"></div>
+      </section>
       <section
         id="contact"
         className="footer py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-6 md:px-8 relative overflow-hidden"
       >
-        {/* Vagues animées */}
-        {/* <div className="wave" id="wave1"></div>
-        <div className="wave" id="wave2"></div>
-        <div className="wave" id="wave3"></div>
-        <div className="wave" id="wave4"></div> */}
-
         {/* Contenu principal */}
         <div className="max-w-7xl mx-auto text-center z-10 relative flex flex-col items-center">
           <h2 className="fotter-title text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mt-2 sm:mt-4 mb-1 sm:mb-2 text-[#a1ae66] bg-[#a1ae66] bg-clip-text text-transparent text-center">
@@ -691,7 +691,7 @@ export default function Home() {
                 {emailAddress}
               </p>
             </div>
-            
+
             <EmailPopup
               isOpen={isPopupOpen}
               onClose={() => setIsPopupOpen(false)}
