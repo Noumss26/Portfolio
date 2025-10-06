@@ -655,8 +655,7 @@ export default function Home() {
           </div>
         </section>
       </BackgroundBeamsWithCollision>
-
-      <section className="bg-[#F0F8FF]  lg:py-4 relative overflow-hidden ">
+      <section className="contener-waves relative overflow-hidden  md:min-h-[20px] lg:min-h-[30px]">
         {/* Vagues animées */}
         <div className="wave" id="wave1"></div>
         <div className="wave" id="wave2"></div>
