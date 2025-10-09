@@ -89,6 +89,11 @@ export default function Home() {
       icon: <Code className="w-6 h-6" />,
       techs: ["MERISE", "UML"],
     },
+    {
+      name: "CI/CD",
+      icon: <Code className="w-6 h-6" />,
+      techs: ["Jenkins", "SonarQube", "Nexus"],
+    },
   ];
 
   const projects = [
@@ -667,7 +672,7 @@ export default function Home() {
         className="footer py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-6 md:px-8 relative overflow-hidden"
       >
         {/* Contenu principal */}
-        <div className="max-w-7xl mx-auto text-center z-10 relative flex flex-col items-center">
+        <div className="max-w-7xl mx-auto text-center z-5 relative flex flex-col items-center">
           <h2 className="fotter-title text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mt-2 sm:mt-4 mb-1 sm:mb-2 text-[#a1ae66] bg-[#a1ae66] bg-clip-text text-transparent text-center">
             Travaillons Ensemble
           </h2>
@@ -678,26 +683,54 @@ export default function Home() {
 
           {/* Cartes */}
           <div className="Cartes grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-6 sm:mb-8 md:mb-10 lg:mb-12 w-full max-w-6xl">
-            <div
-              className="group p-4 sm:p-5 md:p-6 backdrop-blur-md bg-white/5 rounded-xl sm:rounded-2xl border border-gray-700 hover:border-[#e3c177]/60 transition-all duration-300 hover:scale-105 cursor-pointer"
-              onClick={() => setIsPopupOpen(true)}
+            <a
+              href={`https://mail.google.com/mail/?view=cm&fs=1&to=${emailAddress}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => {
+                e.preventDefault();
+                // Copier l'email dans le presse-papiers
+                navigator.clipboard
+                  .writeText(emailAddress)
+                  .then(() => {
+                    // Afficher une notification temporaire
+                    const notification = document.createElement("div");
+                    notification.textContent = "Adresse e-mail copiée !";
+                    notification.className =
+                      "fixed top-20 right-5 bg-[#e3c177]/90 text-white px-6 py-3 rounded-lg font-medium z-[9999] animate-[slideIn_0.3s_ease] shadow-lg";
+                    document.body.appendChild(notification);
+
+                    // Retirer la notification après 2 secondes
+                    setTimeout(() => {
+                      notification.className =
+                        "fixed top-20 right-5 bg-[#e3c177]/90 text-white px-6 py-3 rounded-lg font-medium z-[9999] animate-[slideOut_0.3s_ease] shadow-lg";
+                      setTimeout(() => notification.remove(), 300);
+                    }, 2000);
+
+                    // Ouvrir Gmail après un court délai
+                    setTimeout(() => {
+                      window.open(
+                        `https://mail.google.com/mail/?view=cm&fs=1&to=${emailAddress}`,
+                        "_blank"
+                      );
+                    }, 3000);
+                  })
+                  .catch((err) => {
+                    console.error("Erreur lors de la copie:", err);
+                  });
+              }}
+              className="group p-4 sm:p-5 md:p-6 backdrop-blur-md bg-white/5 rounded-xl sm:rounded-2xl border border-gray-700 hover:border-[#e3c177]/60 transition-all duration-300 hover:scale-105 cursor-pointer block"
             >
               <Mail className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-[#e3c177] mx-auto mb-3 sm:mb-4" />
               <h3 className="text-base sm:text-lg font-semibold text-white mb-1 sm:mb-2">
                 Email
               </h3>
-              <p className="text-sm sm:text-base text-gray-200 break-all">
+              <p className="text-sm sm:text-base text-gray-200">
                 {emailAddress}
               </p>
-            </div>
-
-            <EmailPopup
-              isOpen={isPopupOpen}
-              onClose={() => setIsPopupOpen(false)}
-              emailAddress={emailAddress}
-            />
+            </a>
             <a
-              href="https://linkedin.com/in/votre-profil-linkedin"
+              href="https://linkedin.com/in/andrinomena-vatsy-jeïel-raly-53b875386"
               target="_blank"
               rel="noopener noreferrer"
               className="group p-4 sm:p-5 md:p-6 backdrop-blur-md bg-white/5 rounded-xl sm:rounded-2xl border border-gray-700 hover:border-[#e3c177]/60 transition-all duration-300 hover:scale-105 cursor-pointer block"

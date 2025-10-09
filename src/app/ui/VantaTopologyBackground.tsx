@@ -76,7 +76,7 @@ const VantaTopologyBackground: React.FC<VantaProps> = ({ theme, children }) => {
       className="relative w-full h-full min-h-screen"
       style={{ position: 'relative' }}
     >
-      <div className="relative z-10">{children}</div>
+      <div className="relative z-5">{children}</div>
     </div>
   );
 };
