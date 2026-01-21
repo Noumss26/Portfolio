@@ -114,7 +114,7 @@ export default function Home() {
         "Portfolio personnel mettant en valeur mes projets, avec une interface moderne et des animations fluides.",
       image: portfolio,
       tech: ["NextJs", "Tailwind", "framer Motion", "css"],
-      github: "#",
+      github: "https://github.com/Noumss26/Portfolio",
       demo: "#",
     },
     {
@@ -123,8 +123,8 @@ export default function Home() {
         "Application web de recherche opérationnelle d'optimisation de transport avec les méthodes Coin Nord-Ouest et Balas-Hammer, incluant visualisation dynamique et graphe interactif.",
       image: RO,
       tech: ["React", "TypeScript", "Next.js", "Algorithmique", "Graphes"],
-      github: "https://github.com/ton-projet/transport-cno-balas",
-      demo: "https://ton-projet.vercel.app",
+      github: "#",
+      demo: "#",
     },
     {
       title: "Creation D' un modele d ' IA de detection de besoins",
@@ -132,8 +132,8 @@ export default function Home() {
         "Application web de détection des besoins fonctionnels et non fonctionnels à partir de conversations vidéo et audio, en utilisant Whisper, Pyannote et BERT.",
       image: AI,
       tech: ["React", "TypeScript", "Next.js", "Whisper", "Pyannote", "BERT", "FastAPI"],
-      github: "https://github.com/ton-projet/transport-cno-balas",
-      demo: "https://ton-projet.vercel.app",
+      github: "https://github.com/Noumss26/ProjetM1-Front",
+      demo: "#",
     },
     {
       title: "Application mobile de receuil de chansons",
@@ -141,8 +141,8 @@ export default function Home() {
         "Application mobile de recueil de chansons avec des fonctionnalités de lecture, de recherche de chansons et de notation des clés de chaque chanson, avec la musique appropriée associée.",
       image: MS,
       tech: ["Flutter", "Dart", "Java", "SQLite"],
-      github: "https://github.com/ton-projet/transport-cno-balas",
-      demo: "https://ton-projet.vercel.app",
+      github: "#",
+      demo: "#",
     },
   ];
 
