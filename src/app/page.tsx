@@ -31,6 +31,8 @@ import { ColourfulText } from "./ui/ColourfulText";
 import paie from "./image/gestion de paye.png";
 import portfolio from "./image/portfolio.png";
 import RO from "./image/RO.png";
+import AI from "./image/AI.png";
+import MS from "./image/MS.png";
 import profil from "./image/profil.png";
 const poppins = Poppins({
   subsets: ["latin"],
@@ -121,6 +123,24 @@ export default function Home() {
         "Application web de recherche opérationnelle d'optimisation de transport avec les méthodes Coin Nord-Ouest et Balas-Hammer, incluant visualisation dynamique et graphe interactif.",
       image: RO,
       tech: ["React", "TypeScript", "Next.js", "Algorithmique", "Graphes"],
+      github: "https://github.com/ton-projet/transport-cno-balas",
+      demo: "https://ton-projet.vercel.app",
+    },
+    {
+      title: "Creation D' un modele d ' IA de detection de besoins",
+      description:
+        "Application web de détection des besoins fonctionnels et non fonctionnels à partir de conversations vidéo et audio, en utilisant Whisper, Pyannote et BERT.",
+      image: AI,
+      tech: ["React", "TypeScript", "Next.js", "Whisper", "Pyannote", "BERT", "FastAPI"],
+      github: "https://github.com/ton-projet/transport-cno-balas",
+      demo: "https://ton-projet.vercel.app",
+    },
+    {
+      title: "Application mobile de receuil de chansons",
+      description:
+        "Application mobile de recueil de chansons avec des fonctionnalités de lecture, de recherche de chansons et de notation des clés de chaque chanson, avec la musique appropriée associée.",
+      image: MS,
+      tech: ["Flutter", "Dart", "Java", "SQLite"],
       github: "https://github.com/ton-projet/transport-cno-balas",
       demo: "https://ton-projet.vercel.app",
     },
@@ -509,7 +529,9 @@ export default function Home() {
                   >
                     Me contacter
                   </button>
-                  <button className="px-6 sm:px-8 py-3 sm:py-4 border-2 text-[#e3c177] backdrop-blur-sm border-gray-600 rounded-lg font-semibold hover:border-gray-600 hover:bg-[#e3c177] hover:text-white transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-white/15 text-sm sm:text-base">
+                  <button
+                    onClick={() => window.open('/documents/Raly_CV.pdf', '_blank')}
+                   className="px-6 sm:px-8 py-3 sm:py-4 border-2 text-[#e3c177] backdrop-blur-sm border-gray-600 rounded-lg font-semibold hover:border-gray-600 hover:bg-[#e3c177] hover:text-white transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-white/15 text-sm sm:text-base">
                     Télécharger mon CV
                   </button>
                 </div>
